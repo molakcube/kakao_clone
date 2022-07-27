@@ -1,12 +1,2 @@
-.select_option {
-    float: left;
-    width: 100px;
-    height: 400px;
-    background-color: gray;
 
-};
-
-.select_option > li {
-    display: block;
-};
 
