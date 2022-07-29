@@ -29,3 +29,56 @@ header {
     border-bottom: 1px solid gray; 
     display: flex;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.sizebar {
+    align-self: flex-end;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    color: rgba(160, 155, 155, 0.993);
+}
+
+.friends_line {
+    display: flex;
+}
+
+.friend {
+    font-size: 17px;
+    font-weight: bold;
+    flex-grow: 2;
+    /*flex-grow값을 설정 하면, 이 값이 x/n만큼의 모집단의 크기를 차지 한다
+    만약, 다른 모집단 안에 있는 요소에 flex-grow를 걸지 않았다면, 그 자손은
+    0/n만큼의 범위를 갖게 된다. 그러나, 이것은 모집단 범위 안에서의 자손
+    의 범위를 말하는 것이다. 다시말해서, 자손의 범위가 0이지만, 자손 안에
+    있는 요소의 최소 사이즈가 존재하는 경우,  그 사이즈를 존중해준다.
+
+    이를 통해, flex-grow가 걸린 자손은 걸리지 않은 요소들을 정렬된 가장 끝방향
+    으로 밀어내게 된다. 
+    
+    이 상태에서, 자손 범위 안에 속한 요소를 시작점에 고정시켜버리면, 즉, 배열을
+    만지지 않은 채로 시작시키면, 마치 해당 자손과 그렇지 않은 자손이 양 끝단에
+    위치한 것 처럼 보이게 할 수 있다. 
+    
+    그러면, 아무리 모집단의 크기가 변화해도 flex-grow가 걸린 자손은 그 범위를
+    자연스럽게 차지하게 된다.*/
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+
+.search, .add_newfriends {
+    flex-basis: 20px;
+    /* flex-basis는 flex가 걸린 자손요소에게 설정하는 요소로, 해당 크기만큼
+    최소한으로 보장한다는 의미를 갖고 있다.
+
+    이 요소를 쓰는 이유는 grow보다 통제하고 예상하기 쉽기 때문에 그러하다.
+
+    이 요소 덕분에 절대적인 사이즈를 부여하여 flex-grow를 사용하면 나타나는
+    문제점인, 모집단의 크기가 변화했을 때 가지는 분모의 변화로 인한 
+    계속해서 상대적인 크기를 갖게 된다는 점을 해결하기 위해 절대적인 값을
+    부여하여 제어의 용이함을 위해 주었다. */
+    margin-right: 10px;
+}
