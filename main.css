@@ -3,6 +3,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* 이번에 추가된 부분. body자체에 flex를 걸어서 하위요소 continer를 가로 정렬
+    그후 가로로 center, 내용물 center를 통해 중앙정렬
+    
+    height 값에 있는 vh는 보여지는 시점에서 높이를 100%가져가겠다는 소리*/
 }
 
 .container {
@@ -11,6 +15,7 @@ body {
     width: 50vh;
     height: 80vh;
     border: 1px solid gray;
+    /* 너비와 height값을 vh로 변경, 덕분에 창 사이즈에 따라 유동적으로 바뀜 */
 }
 
 section {
@@ -53,6 +58,12 @@ nav {
     flex-direction: column;
     flex-grow: 2;
     justify-content: stretch;
+    /* 이부분이 가장 힘들었음
+    
+    footer를 가장 밑에 위치시키기 위해서 생각해보니 footer는 small_container와
+    함께 flex를 공유하는 자손임. 그래서 이부분에 stretch와 grow를 걸어버리면
+    footer를 밀고, 자연스럽게 small_container내부 요소인 nav와 main파트가
+    늘어남*/
 }
 
 header {
@@ -106,9 +117,15 @@ header {
 
 .multiprofile_block, .brthfirends_block, .upd_profile_block {
     display: flex;
+    /* 이 부분은 내부내용들을 가로로 정렬하기 위함,
+    
+    그 이유는 section을 나누는 곳과 화살표를 평행하게 놔두고 싶어서 그랬음
+    
+    이후 어떻게 이름부분을 마치 column을 쓴것처럼 보이게 할지는 좀더 생각해봐야함
+    
+    가장 먼저 생각나는 것은 화살표가 들어갈 부분을 또 div로 묶는 방법도 있음*/
 }
 
 footer {
     border-top: 1px solid gray;
-    flex: end;
 }
