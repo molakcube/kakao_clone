@@ -1,13 +1,21 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    max-height: 1000px;
+    width: 50vh;
+    height: 80vh;
     border: 1px solid gray;
 }
 
 section {
     display: flex;
+    flex-grow: 1;
 }
 
 nav {
@@ -44,12 +52,14 @@ nav {
     display: flex;
     flex-direction: column;
     flex-grow: 2;
+    justify-content: stretch;
 }
 
 header {
     border-bottom: 1px solid gray; 
     display: flex;
     flex-direction: column;
+    flex: start;
 }
 
 .sizebar {
@@ -89,11 +99,16 @@ header {
 .friend {
     font-size: 17px;
     font-weight: bold;
-    flex-grow: 2;
+    flex-grow: 1;
     margin-left: 10px;
     margin-bottom: 3px;
 }
 
+.multiprofile_block, .brthfirends_block, .upd_profile_block {
+    display: flex;
+}
+
 footer {
     border-top: 1px solid gray;
+    flex: end;
 }
