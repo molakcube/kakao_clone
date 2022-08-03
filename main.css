@@ -26,8 +26,9 @@ section {
 nav {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid gray;
     flex-basis: 50px;
+    background-color: rgb(231, 231, 231);
+    
 }
 
 
@@ -115,17 +116,32 @@ header {
     margin-bottom: 3px;
 }
 
-.multiprofile_block, .brthfirends_block, .upd_profile_block {
-    display: flex;
-    /* 이 부분은 내부내용들을 가로로 정렬하기 위함,
-    
-    그 이유는 section을 나누는 곳과 화살표를 평행하게 놔두고 싶어서 그랬음
-    
-    이후 어떻게 이름부분을 마치 column을 쓴것처럼 보이게 할지는 좀더 생각해봐야함
-    
-    가장 먼저 생각나는 것은 화살표가 들어갈 부분을 또 div로 묶는 방법도 있음*/
+main {
+    box-sizing: content-box;
+    overflow-y: scroll;
 }
 
-footer {
-    border-top: 1px solid gray;
+.sortbar {display: flex;}
+
+/* 각 항목당 소팅하는 바가 있어서 한꺼번에 처리하기 위해서 이러한 이름 사용 */
+
+.sort_name {
+    flex-grow: 1;
+    font-size: 12px;
+}
+
+#arrow {
+    margin: 5px;
+    font-size: 12px;
+}
+
+.block_section {
+    display: flex;
+    height: 70px;
+    align-content: center;
+}
+
+.adv_block {
+    background-color: rgb(245, 245, 245);
+    margin-top: auto;
 }
