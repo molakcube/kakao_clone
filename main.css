@@ -9,11 +9,11 @@ body {
     height 값에 있는 vh는 보여지는 시점에서 높이를 100%가져가겠다는 소리*/
 }
 
+
 .container {
     display: flex;
     flex-direction: column;
     width: 50vh;
-    height: 80vh;
     border: 1px solid gray;
     /* 너비와 height값을 vh로 변경, 덕분에 창 사이즈에 따라 유동적으로 바뀜 */
 }
@@ -21,19 +21,19 @@ body {
 section {
     display: flex;
     flex-grow: 1;
+    /* max-height: 70%; */
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    flex-basis: 50px;
     background-color: rgb(231, 231, 231);
     
 }
 
 
 .top-nav {
-    flex-grow: 2;
+    flex-grow: 1;
     margin-top: 30px;
     font-size: 20px;
 }
@@ -57,14 +57,7 @@ nav {
 .small_container {
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
-    justify-content: stretch;
-    /* 이부분이 가장 힘들었음
-    
-    footer를 가장 밑에 위치시키기 위해서 생각해보니 footer는 small_container와
-    함께 flex를 공유하는 자손임. 그래서 이부분에 stretch와 grow를 걸어버리면
-    footer를 밀고, 자연스럽게 small_container내부 요소인 nav와 main파트가
-    늘어남*/
+    flex-grow: 1;
 }
 
 header {
@@ -119,6 +112,8 @@ header {
 main {
     box-sizing: content-box;
     overflow-y: scroll;
+    min-height: 10vh;
+    max-height: 70vh;
 }
 
 .sortbar {display: flex;}
@@ -138,10 +133,9 @@ main {
 .block_section {
     display: flex;
     height: 70px;
-    align-content: center;
 }
 
-.adv_block {
+footer {
     background-color: rgb(245, 245, 245);
-    margin-top: auto;
+    height: 70px;
 }
