@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container">   
     <section>
       <nav>
-        <div class="top-nav">
+        <div class="top-nav ">
           <div class="channel_main">
             <i class="fa-solid fa-user"></i>
           </div>
@@ -60,17 +60,19 @@
         </header>
         <main>
           <div class="myprofile_block">
-            <div class="block_section">  
-              <img class="myprofile_img" src="C:\Users\jhjja\Desktop\cacao_clone\img\default_profile_image.jpg">
+            <div class="blocksection">  
+              <img class="myprofile_img" src="img/default_profile_image.jpg">
               <div class="myprofile">user_name</div>
             </div>
           </div>
           <div class="multiprofile_block">
             <div class="sortbar">
               <div class="sort_name">내 멀티프로필</div>
-              <i id="arrow" class="fa-solid fa-chevron-up"></i>
+              <button id="arrow">
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
             </div>
-            <div class="block_section">
+            <div class="blocksection">
               <div class="multiprofile_img"></div>
               <div class="multiprofile">친구별로 다른 프로필을 설정해보세요!</div>
             </div>
@@ -78,9 +80,11 @@
           <div class="brthfirends_block">
             <div class="sortbar">
               <div class="sort_name">생일인 친구</div>
-              <i id="arrow" class="fa-solid fa-chevron-up"></i>
+              <button id="arrow">
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
             </div>
-            <div class="block_section">
+            <div class="blocksection ">
               <div class="brthfriends_img"></div>
               <div class="brthfriends">친구의 생일을 확인해보세요!</div>
             </div>
@@ -88,9 +92,11 @@
           <div class="upd_profile_block">
             <div class="sortbar">
               <div class="sort_name">업데이트한 친구</div>
-              <i id="arrow" class="fa-solid fa-chevron-up"></i>
+              <button id="arrow">
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
             </div>
-            <div class="block_section">
+            <div class="blocksection">
               <div class="merge_profile">
                 <div class="upd_profile_img1"></div>
                 <div class="upd_profile_img2"></div>
@@ -100,29 +106,33 @@
               <div class="upd_profile">친구의 프로필을 확인해보세요!</div>
             </div> 
           </div>
-          <div class="sortbar">
-            <div class="sort_name">친구</div>
-            <i id="arrow" class="fa-solid fa-chevron-up"></i>
-          </div>
-          <div class="block_section">
-            <img class="friends1_img" src="C:\Users\jhjja\Desktop\cacao_clone\img\default_profile_image.jpg">
-            <div class="friends">friends1</div>
-          </div>
-          <div class="block_section">
-            <img class="friends2_img" src="C:\Users\jhjja\Desktop\cacao_clone\img\default_profile_image.jpg">
-            <div class="friends">friends2</div>
-          </div>
-          <div class="block_section">
-            <img class="friends3_img" src="C:\Users\jhjja\Desktop\cacao_clone\img\default_profile_image.jpg">
-            <div class="friends">friends3</div>
-          </div>
-          <div class="block_section">
-            <img class="friends4_img" src="C:\Users\jhjja\Desktop\cacao_clone\img\default_profile_image.jpg">
-            <div class="friends">friends4</div>
-          </div>
-          <div class="block_section">
-            <img class="friends5_img" src="C:\Users\jhjja\Desktop\cacao_clone\img\default_profile_image.jpg">
-            <div class="friends">friends5</div>
+          <div class="friends_section">
+            <div class="sortbar">
+              <div class="sort_name">친구</div>
+              <button id="arrow">
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
+            </div>
+            <div class="blocksection">
+              <img class="friends1_img" src="img/default_profile_image.jpg">
+              <div class="friends">friends1</div>
+            </div>
+            <div class="blocksection">
+              <img class="friends2_img" src="img/default_profile_image.jpg">
+              <div class="friends">friends2</div>
+            </div>
+            <div class="blocksection">
+              <img class="friends3_img" src="img/default_profile_image.jpg">
+              <div class="friends">friends3</div>
+            </div>
+            <div class="blocksection">
+              <img class="friends4_img" src="img/default_profile_image.jpg">
+              <div class="friends">friends4</div>
+            </div>
+            <div class="blocksection">
+              <img class="friends5_img" src="img/default_profile_image.jpg">
+              <div class="friends">friends5</div>
+            </div>
           </div>
         </main>
       </div>
@@ -136,5 +146,6 @@
       </div>
     </footer>
   </div>
+  <script src="src/drops.js"></script>
 </body>
 </html>
